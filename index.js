@@ -1,5 +1,12 @@
-var http = require('http');
+const express = require("express");
 
-http.createServer(function(req, res){
-    res.end("TESTE!!!");
-}).listen(8090);
+const app = express();
+
+app.get("/", function(req, res){
+    res.send("Started aaa");
+})
+
+app.get("/contato", function(req, res){
+    res.send("pagina contato");
+})
+app.listen(8080);
